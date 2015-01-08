@@ -712,7 +712,7 @@ angular.module("ngCordova.plugins.oauth", ["ngCordova.plugins.oauthUtility"])
             browserRef.addEventListener("loadstart", function (event) {
 							console.log(event.url);
               if ((event.url).indexOf("https://www.coinbase.com/oauth/authorize/") === 0) {
-                var requestToken = (event.url).split("/")[1];
+                var requestToken = (event.url).split("/")[5];
                 $http.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
                 $http({
                   method: "post",
